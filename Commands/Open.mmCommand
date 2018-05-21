@@ -7,7 +7,7 @@
 	command       =
 
 '#!/bin/bash
-url=`egrep -o "https://github\.com/[^ ]+" | tail -1`
+url=`egrep -o "https://(.*\.)?github\.com/[^ ]+" | tail -1`
 if [ $url != "" ]; then
 	open "$url"
 fi
